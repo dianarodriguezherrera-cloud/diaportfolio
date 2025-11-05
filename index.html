@@ -5,161 +5,51 @@
   <title>Diana Rodriguez – Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- paste the style code right here -->
   <style>
-    :root { --maxw: 1100px; }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    html, body {
+      height: 100%;
+      margin: 0;
       color: #fff;
-      background-image: url('_.jpeg');   /* ✅ uses your plaid file */
-      background-size: cover;
-      background-attachment: fixed;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background-image: url('_.jpeg');  /* your plaid image */
       background-position: center;
+      background-attachment: fixed;
       background-repeat: repeat;
-      min-height: 100vh;
+      background-size: cover; /* makes it full screen */
+    }
+
+    header, main, footer {
+      background: rgba(0, 0, 0, 0.45);
+      color: #fff;
     }
 
     header {
       text-align: center;
       padding: 40px 20px 10px;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    h1 {
-      letter-spacing: 0.1em;
-      font-size: 2rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      margin: 0 12px;
-      text-decoration: none;
-      color: #ccc;
-      font-weight: 600;
-    }
-
-    nav a:hover {
-      color: #fff;
     }
 
     main {
-      max-width: var(--maxw);
+      max-width: 900px;
       margin: 30px auto;
       padding: 20px;
-      background-color: rgba(0, 0, 0, 0.55);
       border-radius: 12px;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
-
-    /* gallery grid */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      position: relative;
-      display: block;
-      overflow: hidden;
-      border-radius: 12px;
-      text-decoration: none;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-    }
-
-    .card img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-      filter: blur(8px) brightness(0.8);
-      transition: filter 0.3s ease;
-    }
-
-    .card:hover img {
-      filter: blur(4px) brightness(1);
-    }
-
-    .overlay {
-      position: absolute;
-      inset: 0;
-      display: grid;
-      place-items: center;
-      background: rgba(0, 0, 0, 0.4);
-      color: #fff;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      opacity: 1;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      color: #ccc;
-      background-color: rgba(0, 0, 0, 0.6);
     }
-
   </style>
 </head>
+
 <body>
   <header>
-    <h1>DIANAS PORTFOLIO</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#about">About</a>
-      <a href="mailto:you@example.com">Contact</a>
-    </nav>
+    <h1>Hi, I’m Diana — welcome to my portfolio.</h1>
   </header>
 
   <main>
-    <h2>Gallery</h2>
-    <section class="grid">
-      <!-- clickable images that lead to hidden art pages -->
-      <a class="card" href="art/art1.html">
-        <img src="thumbs/art1.jpg" alt="Artwork 1 thumbnail">
-        <div class="overlay">View</div>
-      </a>
-
-      <a class="card" href="art/art2.html">
-        <img src="thumbs/art2.jpg" alt="Artwork 2 thumbnail">
-        <div class="overlay">View</div>
-      </a>
-
-      <a class="card" href="art/art3.html">
-        <img src="thumbs/art3.jpg" alt="Artwork 3 thumbnail">
-        <div class="overlay">View</div>
-      </a>
-
-      <!-- add more artwork blocks if needed -->
-    </section>
-
-    <section id="about" style="margin-top:40px;">
-      <h2>About Me</h2>
-      <p style="text-align:center; max-width:700px; margin:0 auto; line-height:1.5;">
-        Hi, I'm Diana! I use a digital camera and create digital artwork.  
-        This gallery shows a selection of my projects and photos.  
-        Thumbnails are blurred to protect the artwork — click to view each piece individually.
-      </p>
-    </section>
+    <p style="text-align:center;">Here’s where your artwork and links will go!</p>
   </main>
 
   <footer>
