@@ -5,55 +5,42 @@
   <title>Diana Rodriguez – Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- paste the style code right here -->
   <style>
+    /* make sure nothing blocks the background */
     html, body {
       height: 100%;
       margin: 0;
-      color: #fff;
+      padding: 0;
+    }
+
+    /* background setup */
+    body {
+      background-image: url('_.jpeg'); /* your plaid image */
+      background-size: cover;          /* fills the screen */
+      background-repeat: no-repeat;    /* no tiling */
+      background-position: center;     /* centered image */
+      background-attachment: fixed;    /* stays in place while scrolling */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      background-image: url('_.jpeg');  /* your plaid image */
-      background-position: center;
-      background-attachment: fixed;
-      background-repeat: repeat;
-      background-size: cover; /* makes it full screen */
     }
 
-    header, main, footer {
-      background: rgba(0, 0, 0, 0.45);
-      color: #fff;
-    }
-
-    header {
-      text-align: center;
-      padding: 40px 20px 10px;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 20px;
+    /* text style */
+    h1 {
+      background-color: rgba(0, 0, 0, 0.6); /* adds contrast box */
+      padding: 20px 40px;
       border-radius: 12px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
+      font-size: 1.8rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <h1>Hi, I’m Diana — welcome to my portfolio.</h1>
-  </header>
-
-  <main>
-    <p style="text-align:center;">Here’s where your artwork and links will go!</p>
-  </main>
-
-  <footer>
-    &copy; 2025 Diana Rodriguez
-  </footer>
+  <h1>Hi, I’m Diana — welcome to my portfolio.</h1>
 </body>
 </html>
