@@ -1,72 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Meme Project</title>
   <style>
-    body {
-      background-color: #111;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-
-    h1 {
-      margin-top: 50px;
-      text-shadow: 2px 2px 8px black;
-    }
-
-    em {
-      color: #ccc;
-    }
-
-    img {
-      width: 80%;
-      max-width: 900px;
-      border-radius: 10px;
-      margin-top: 30px;
-      box-shadow: 0 0 25px rgba(255,255,255,0.3);
-      transition: transform 0.3s ease;
-    }
-
-    img:hover {
-      transform: scale(1.02);
-    }
-
-    p {
-      max-width: 700px;
-      margin: 20px auto;
-      line-height: 1.6;
-      font-size: 1.1em;
-    }
-
-    a {
-      color: lightblue;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
+    body { background:#111; color:#fff; font-family:Arial, sans-serif; text-align:center; margin:0; }
+    h1 { margin-top:48px; text-shadow:2px 2px 8px #000; }
+    em { color:#ccc; }
+    img { width:80%; max-width:900px; border-radius:10px; margin-top:24px;
+          box-shadow:0 0 25px rgba(255,255,255,0.3); }
+    .note { max-width:780px; margin:18px auto; line-height:1.6; }
+    a { color:lightblue; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .debug { font:12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; color:#9cf; margin:14px auto 32px; }
   </style>
 </head>
 <body>
-
   <h1>Meme Project</h1>
   <p><em>The Last Supper but it’s arm day</em></p>
 
-  <!-- ✅ Your meme image -->
-  <img src="thumbs/memess.png" alt="The Last Supper but it’s arm day">
+  <!-- tries thumbs/ first (common), then same-folder -->
+  <img id="meme" src="thumbs/memess.png?v=1" alt="The Last Supper but it’s arm day">
 
-  <p>
-    This meme reimagines Leonardo da Vinci’s <em>The Last Supper</em> with a humorous twist: 
-    the figures transformed into exaggerated “arm day” gym characters. 
-    It combines high art and internet humor to comment on modern fitness culture and meme remixing.
+  <p class="note">
+    This meme reimagines Leonardo da Vinci’s <em>The Last Supper</em> with a humorous “arm day” twist.
   </p>
 
   <p><a href="index.html">← Back to Portfolio</a></p>
 
+  <div class="debug" id="debug">Trying: thumbs/memess.png</div>
+
+  <script>
+    const debug = document.getElementById('debug');
+    const img = document.getElementById('meme');
+    const tries = ["thumbs/memess.png", "memess.png"];
+    let i = 0;
+
+    function tryNext() {
+      i++;
+      if (i >= tries.length) {
+        debug.textContent = "Image not found at either path. Verify filename/case and commit.";
+        return;
+      }
+      const next = tries[i] + "?v=" + Date.now();
+      img.src = next;
+      debug.textContent = "Trying: " + tries[i];
+    }
+
+    img.addEventListener('error', tryNext);
+  </script>
 </body>
 </html>
