@@ -1,41 +1,89 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Diana Rodriguez – Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diana's Portfolio</title>
   <style>
-    html, body {
-      height: 100%;
+    body {
+      background: url('plaid_.jpeg') center/cover no-repeat;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
       margin: 0;
       padding: 0;
     }
 
-    body {
-      background-image: url('plaid_.jpeg'); /* your navy plaid image */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      color: #fff;
+    h1 {
+      margin-top: 50px;
+      text-shadow: 2px 2px 8px black;
     }
 
-    h1 {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 20px 40px;
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px auto;
+      max-width: 1000px;
+    }
+
+    .gallery a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
       border-radius: 12px;
-      font-size: 1.8rem;
-      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(255,255,255,0.4);
+    }
+
+    .caption {
+      margin-top: 8px;
+      font-weight: bold;
+      text-shadow: 1px 1px 4px black;
     }
   </style>
 </head>
 <body>
+
   <h1>Hi, I’m Diana — welcome to my portfolio.</h1>
+
+  <div class="gallery">
+    <a href="glitch.html">
+      <img src="thumbs/butterfly.jpeg" alt="Glitch Art">
+      <div class="caption">Glitch Art</div>
+    </a>
+
+    <a href="meme.html">
+      <img src="thumbs/camera.jpeg" alt="Meme Project">
+      <div class="caption">Meme Project</div>
+    </a>
+
+    <a href="netart.html">
+      <img src="thumbs/flowers.jpeg" alt="Net Art">
+      <div class="caption">Net Art</div>
+    </a>
+
+    <a href="logo.html">
+      <img src="thumbs/heels.jpeg" alt="Logo Design">
+      <div class="caption">Logo Design</div>
+    </a>
+
+    <a href="virtual.html">
+      <img src="thumbs/soda.jpeg" alt="Virtual Exhibit">
+      <div class="caption">Virtual Exhibit</div>
+    </a>
+  </div>
+
 </body>
 </html>
