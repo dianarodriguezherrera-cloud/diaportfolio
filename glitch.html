@@ -1,64 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Glitch – Diana Rodriguez</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <meta charset="UTF-8" />
+  <title>Glitch Art</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      color: #fff;
-      background-image: url('plaid_.jpeg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+    :root { --bg:#111; --fg:#fff; --muted:#bbb; --accent:lightblue; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--fg);
+      font-family: Arial, Helvetica, sans-serif; text-align: center;
     }
-
-    .content {
-      max-width: 900px;
-      margin: 60px auto;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 16px;
-      padding: 30px;
-      text-align: center;
+    h1 { margin: 48px 16px 8px; text-shadow: 2px 2px 8px #000; }
+    .sub { color: var(--muted); margin-bottom: 20px; font-style: italic; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px 48px; }
+    .about { max-width: 780px; margin: 0 auto 24px; line-height: 1.6; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 28px;
     }
-
-    img {
-      max-width: 100%;
-      border-radius: 12px;
-      margin: 20px 0;
+    figure {
+      margin: 0; background: rgba(255,255,255,0.05);
+      border-radius: 12px; padding: 12px 12px 16px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.15);
+      transition: transform .2s ease, box-shadow .2s ease;
     }
-
-    a.back {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 8px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 600;
-      transition: background 0.2s ease;
+    figure:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(255,255,255,0.25); }
+    a.thumb { display: block; border-radius: 8px; overflow: hidden; }
+    img.art {
+      width: 100%; height: 320px; object-fit: cover; display: block;
+      filter: contrast(1.02) saturate(1.05);
+      transition: transform .25s ease;
     }
-
-    a.back:hover {
-      background: rgba(255, 255, 255, 0.4);
-    }
+    a.thumb:hover img.art { transform: scale(1.03); }
+    figcaption { margin-top: 10px; color: var(--muted); }
+    .back { margin-top: 28px; }
+    .back a { color: var(--accent); text-decoration: none; font-weight: bold; }
+    .back a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <div class="content">
-    <h1>Glitch</h1>
-    <p>This page showcases my glitch art piece — exploring digital distortion and layered visuals.</p>
+  <h1>Glitch Art</h1>
+  <div class="sub">analog vibes · digital corruption</div>
 
-    <img src="thumbs/soda.jpeg" alt="Glitch art preview">
+  <div class="wrap">
+    <p class="about">
+      A small series exploring happy accidents: compression errors, channel shifts, and scan artifacts.
+      Click any image to open the full-size version in a new tab.
+    </p>
 
-    <p>In this piece, I experimented with color saturation and intentional image corruption to reveal hidden structures in the photo. It’s part of a series exploring the beauty of imperfection in digital art.</p>
+    <div class="grid">
+      <!-- image 1 -->
+      <figure>
+        <a class="thumb" href="thumbs/glitchera.jpeg" target="_blank" rel="noopener">
+          <img class="art" src="thumbs/glitchera.jpeg" alt="Glitch piece: field with ghosts and horizontal RGB bands">
+        </a>
+        <figcaption>glitchera.jpeg — field apparition</figcaption>
+      </figure>
 
-    <a class="back" href="index.html">← Back to Home</a>
+      <!-- image 2 -->
+      <figure>
+        <a class="thumb" href="thumbs/glitch555.jpeg" target="_blank" rel="noopener">
+          <img class="art" src="thumbs/glitch555.jpeg" alt="Glitch piece: pastry case with bold color channel blocks">
+        </a>
+        <figcaption>glitch555.jpeg — pastry spectrum</figcaption>
+      </figure>
+
+      <!-- image 3 -->
+      <figure>
+        <a class="thumb" href="thumbs/glitch444.jpeg" target="_blank" rel="noopener">
+          <img class="art" src="thumbs/glitch444.jpeg" alt="Glitch piece: grayscale scan texture with vertical streaks">
+        </a>
+        <figcaption>glitch444.jpeg — scan ghost</figcaption>
+      </figure>
+    </div>
+
+    <p class="back"><a href="index.html">← Back to Portfolio</a></p>
   </div>
 </body>
 </html>
